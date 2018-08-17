@@ -3,11 +3,11 @@ WORKDIR /app
 EXPOSE 80
 #EXPOSE 4150
 #EXPOSE 44341
-#EXPOSE 8009
+#EXPOSE 5000
 
 FROM microsoft/dotnet:2.1-sdk AS build
 WORKDIR /src
-COPY ["Luizalabs.EmployeeManager.API.DotNetCore.csproj", ""]
+COPY ["./Luizalabs.EmployeeManager.API.DotNetCore.csproj", ""]
 RUN dotnet restore "./Luizalabs.EmployeeManager.API.DotNetCore.csproj"
 COPY . .
 WORKDIR "/src/"
